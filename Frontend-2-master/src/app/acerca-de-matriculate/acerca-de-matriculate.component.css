@@ -1,0 +1,106 @@
+* {
+    box-sizing: border-box;
+}
+
+.cover {
+    background-image: url('https://trebolense.com.ar/wp-content/uploads/2021/03/ninos-jugando.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #FFFFFF;
+    font-family: "lato";
+    padding: 2em;
+}
+
+.cover__content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.top-section {
+    background-color: #FFFFFF;
+    color: #030303;
+    font-family: Arial;
+    /* font-weight: bold; */
+    padding: 3em;
+    margin-bottom: 4em;
+    opacity: 0.9;
+    font-size: 20px;
+    border-radius: 30px;
+}
+
+.content-preview {
+    flex: 0 1 230px;
+    @media screen and (max-width: $smallest-breakpoint) {
+        flex-grow: 1;
+    }
+}
+
+.title {
+    display: flex;
+    align-items: last baseline;
+    margin-bottom: 2em;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.content-preview {
+    padding: 0.5em;
+    font-family: Arial;
+    color: rgb(5, 5, 5);
+    justify-self: start;
+    @media screen and (min-width: $grid-breakpoint) {
+        &--left {
+            text-align: right;
+            justify-self: end;
+        }
+    }
+}
+
+.lower-section {
+    margin: 0 1em;
+    @media screen and (min-width: $grid-breakpoint) {
+        display: grid;
+        margin-top: 8em;
+    }
+    grid-template-columns: 10% 2fr 10px 2fr 10%;
+    grid-auto-flow: row dense;
+}
+
+.headline {
+    grid-row: 2;
+    grid-column: 1 / -1;
+    display: flex;
+}
+
+.boxed-headline {
+    text-align: center;
+    padding: 1em;
+    border: 1px solid #FFFFFF;
+    position: relative;
+    flex: 1 0 auto;
+    text-transform: uppercase;
+    letter-spacing: 0.4em;
+    line-height: 1.3;
+    font-size: 1.2em;
+    font-weight: 900;
+    max-width: 100%;
+}
+
+.line {
+    position: relative;
+    @media screen and (max-width: $smallest-breakpoint) {
+        display: none;
+    }
+}
+
+h1 {
+    text-align: center;
+    font-family: Arial;
+    font-size: 50px;
+}
+
+h3 {
+    text-align: center;
+    font-family: Arial;
+    font-size: 50px;
+}

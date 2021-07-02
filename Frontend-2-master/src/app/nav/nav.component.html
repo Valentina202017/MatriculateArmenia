@@ -1,0 +1,39 @@
+<h1>
+    <div class="MatriculateEnArmenia">
+    </div>
+</h1>
+
+
+<header class="header">
+    <nav>
+        <ul>
+            <li><a href="#"><span class="primero"><i class="icon icon-house"></i></span>Inicio</a></li>
+            <li><a class="nav-item nav-link active" href="" [routerLink]="['/AcercaDeMatriculate']"><span class="quinto"><i class="icon icon-mail"></i></span>Acerca de</a></li>
+            <li><a class="nav-item nav-link active" href="" [routerLink]="['/Publicaciones']"><span class="cuarto"><i class="icon icon-text"></i></span>Publicaciones</a></li>
+            <li><a class="nav-item nav-link active" href="" [routerLink]="['/Instituciones']"><span class="tercero"><i class="icon icon-suitcase"></i></span>Cupos Ofertados</a></li>
+            <li *ngIf="!(auth.isLoggedIn() | async)"><a ><span class="segundo"><i class="icon icon-tag"></i></span>Resgistro</a>
+                <ul>
+                    <li   >
+                        <a class="nav-item nav-link active" href="" [routerLink]="['/RegistroAcudiente']">Registro Usuario</a>
+                    </li>
+                    <li  >
+                        <a class="nav-item nav-link active" href="" [routerLink]="['/RegistroInstitucion']">Registro Institucion</a>
+                    </li>
+                </ul>
+            </li>
+
+
+            <li *ngIf="!(auth.isLoggedIn() | async)">
+                <a class="nav-item nav-link active" href="" [routerLink]="['/Login']">Login</a>
+            </li>
+            <li *ngIf="auth.isLoggedIn() | async" class="nav-item dropdown">
+                <a class="nav-item nav-link active" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" *ngIf="auth.isLoggedIn() | async">{{auth.getCourrentUser()}}</a>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                    <button class="dropdown-item" type="button" [routerLink]="['/PerfilAcudiente']">Mi perfil</button>
+                    <button class="dropdown-item" type="button" [routerLink]="['/']" (click)="auth.logout()">Salir</button>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+</header>

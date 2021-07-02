@@ -1,0 +1,136 @@
+<app-nav></app-nav>
+<main class="fondo">
+    <div class="container" id="advanced-search-form">
+        <div class="container-xl">
+            <div class="table-responsive">
+                <div class="table-wrapper">
+                    <section class="form-formu">
+                        <h3>REGISTRO ÚNICO DE ACUDIENTE </h3>
+                        <!-- <div class="fondo"> -->
+                        <form [formGroup]="form" (ngSubmit)="onSubmit()" action="#" class="row" style="margin:0 auto">
+                            <div class="form-group col-md-4">
+                                <label for="nombres"></label>
+                                <input formControlName="nombres" placeholder="Nombres" type="text" class="form-control" size="30px" [ngClass]="{ 'is-invalid': submitted && f.nombres.errors }">
+                                <div *ngIf="submitted && f.nombres.errors" class="invalid-feedback">
+                                    <div *ngIf="f.nombres.errors.required">Por favor, ingresa sus Nombres</div>
+                                </div>
+                            </div>
+
+                            <div class="form-group col-md-4">
+                                <label for="apellidos"></label>
+                                <input formControlName="apellidos" placeholder="Apellidos" type="text" size="30px" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.apellidos.errors }">
+                                <div *ngIf="submitted && f.apellidos.errors" class="invalid-feedback">
+                                    <div *ngIf="f.apellidos.errors.required">Por favor, ingresa sus apellidos</div>
+                                </div>
+                            </div>
+
+                            <div class="form-group col-md-4">
+                                <label for="tamaño"></label>
+                                <select id="tamaño" placeholder="Tipo Documento" formControlName="documento" class="form-control">
+                                <option disabled  selected>Tipo documento</option>
+                                <option value="CC">Cédula de ciudadania</option>
+                                <option value="CE">Cédula de extrangería</option>
+                                <option value="PA">Pasaporte</option>
+                            </select>
+                            </div>
+
+                            <div class="form-group col-md-4">
+                                <label for="id"></label>
+                                <input formControlName="id" type="text" placeholder="Identificación" size="30px" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.id.errors }">
+                                <div *ngIf="submitted && f.id.errors" class="invalid-feedback">
+                                    <div *ngIf="f.id.errors.required">Por favor, ingresa su número de documento</div>
+                                </div>
+                            </div>
+
+                            <div class="form-group col-md-4">
+                                <label for="direccion"></label>
+                                <input formControlName="direccion" type="text" placeholder="Dirección" size="30px" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.direccion.errors }">
+                                <div *ngIf="submitted && f.direccion.errors" class="invalid-feedback">
+                                    <div *ngIf="f.direccion.errors.required">Por favor, ingresa su dirección de residencia</div>
+                                </div>
+                            </div>
+
+                            <div class="form-group col-md-4">
+                                <label for="municipioResidencia"> </label>
+                                <select id="municipioResidencia" formControlName="municipio" placeholder="Municipio de residencia" type="text" class="form-control">
+                                    <option disabled  selected>Municipio de residencia</option>
+                                    <option option value="Armenia">Armenia</option>
+                                    <option option value="Circacia">Circacia</option>
+                                    <option option value="Salento">Salento</option>
+                                    <option option value="Filandia">Filandia</option>
+                                    <option option value="Montenegro">Montenegro</option>
+                                    <option option value="Pijao">Pijao</option>
+                                    <option option value="Génova">Génova</option>
+                                    <option option value="Sevilla">Sevilla</option>
+                                    <option option value="La Tebaida">La Tebaida</option>
+                                    <option option value="Buenavista">Buenavista</option>
+                                    <option option value="Córdoba">Córdoba</option>
+                                    <option option value="Calarcá">Calarcá</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group col-md-4">
+                                <label for="ocuapacion"></label>
+                                <input formControlName="ocupacion" type="text" placeholder="Ocupación" size="30px" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.ocupacion.errors }">
+                                <div *ngIf="submitted && f.ocupacion.errors" class="invalid-feedback">
+                                    <div *ngIf="f.ocupacion.errors.required">Por favor, ingresa su ocupación</div>
+                                </div>
+                            </div>
+
+                            <div class="form-group col-md-4">
+                                <label for="oparentesco"></label>
+                                <input formControlName="parentesco" type="text" placeholder="Parentesco" size="30px" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.parentesco.errors }">
+                                <div *ngIf="submitted && f.parentesco.errors" class="invalid-feedback">
+                                    <div *ngIf="f.parentesco.errors.required">Por favor, ingresa su parentesco con el estudiante</div>
+                                </div>
+                            </div>
+
+                            <div class="form-group col-md-4">
+                                <label for="num1"></label>
+                                <input formControlName="num1" type="text" placeholder="Télefono 1" size="30px" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.num1.errors }">
+                                <div *ngIf="submitted && f.num1.errors" class="invalid-feedback">
+                                    <div *ngIf="f.num1.errors.required">Por favor, ingresa su número de contacto</div>
+                                </div>
+                            </div>
+
+                            <div class="form-group col-md-4">
+                                <label for="email"></label>
+                                <input formControlName="num2" type="text" placeholder="Télefono 2" class="form-control" size="30px" [ngClass]="{ 'is-invalid': submitted && f.num2.errors }">
+                                <div *ngIf="submitted && f.num2.errors" class="invalid-feedback">
+                                    <div *ngIf="f.num2.errors.required">Por favor, ingresa su número de contacto</div>
+                                </div>
+                            </div>
+
+                            <div class="form-group col-md-4">
+                                <label for="email"></label>
+                                <input formControlName="email" type="email" placeholder="E-mail" class="form-control" size="30px" [ngClass]="{ 'is-invalid': submitted && f.email.errors }">
+                                <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                                    <div *ngIf="f.email.errors.required">El email es obligatorio</div>
+                                    <div *ngIf="f.email.errors.email">Por favor, ingresa tu Email</div>
+                                </div>
+                            </div>
+
+                            <div class="form-group col-md-4">
+                                <label for="password"></label>
+                                <input formControlName="password" type="password" placeholder="Contraseña" size="30px" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }">
+                                <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                                    <div *ngIf="f.password.errors.required">Por favor, ingresa una contraseña nueva</div>
+                                </div>
+                            </div>
+                            <div *ngIf="load">
+                                <button type="submit" class="btn btn-primary btn-lg active boton1">Registrarse</button>
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <div *ngIf="!load" class="spinner-border text-warning" role="status">
+                                    <span class="visually-hidden"></span>
+                                </div>
+                            </div>
+                        </form>
+                        <!-- </div> -->
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<app-footer></app-footer>

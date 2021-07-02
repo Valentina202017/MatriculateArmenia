@@ -1,0 +1,104 @@
+#advanced-search-form {
+    background-color: #fff;
+    max-width: 840px;
+    margin: 180px auto 0;
+    padding: 80px;
+    color: #050505;
+    font-weight: bolder;
+    box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.2);
+    margin-top: -40px;
+    opacity: 10;
+}
+
+.fondo {
+    background-image: url('https://uploads-blog.encuesta.com/wp-content/uploads/2018/05/31154312/libro-fondo-tablero-verde_1150-3837.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #FFFFFF;
+    font-family: "Arial";
+    padding: 5em;
+    /* filter: brightness(50%); */
+}
+
+#advanced-search-form h2 {
+    padding-bottom: -40px;
+    margin: 20px 20px;
+    font-size: 20px;
+}
+
+
+/* #advanced-search-form hr {
+margin-top: 38px;
+margin-bottom: 54px;
+margin-left: 5px;
+border: 1px solid #cccccc;
+} */
+
+#advanced-search-form .form-group {
+    margin-bottom: 0px;
+    margin-left: 41px;
+    width: 10%;
+    float: left;
+    text-align: left;
+}
+
+#advanced-search-form .form-control {
+    padding: 10px 9px;
+    height: auto;
+    border-radius: 4px;
+    border: 2px solid rgb(0, 0, 0);
+    width: 130%;
+}
+
+#advanced-search-form .radio-inline {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#advanced-search-form .gender {
+    width: 30%;
+    margin-top: 30px;
+    /* padding-left: 20px padding-top: 5px;
+padding-bottom: 5px; */
+}
+
+#advanced-search-form .btn {
+    width: 50%;
+    margin: 20px auto 0;
+    display: block;
+    outline: none;
+}
+
+@media screen and (max-width: 800px) {
+    #advanced-search-form .form-group {
+        width: 45%;
+    }
+    #advanced-search-form {
+        margin-top: 0px;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    #advanced-search-form .form-group {
+        width: 100%;
+        margin-left: 0;
+    }
+    #advanced-search-form h2 {
+        text-align: center;
+    }
+}
+
+
+/* .titulo {
+text-align: center;
+font-size: 70px;
+font-family: Arial;
+color: rgb(0, 0, 0);
+} */
+
+h2 {
+    font-weight: bold;
+    font-size: 70px;
+    text-align: center;
+    font-family: Arial;
+}

@@ -1,0 +1,57 @@
+<app-nav></app-nav>
+<main class="fondo">
+    <div class="container" id="advanced-search-form">
+        <div class="container-xl">
+            <div class="table-responsive">
+                <div class="table-wrapper">
+                    <section class="form-formu">
+                        <div class="titulo">
+                            <h3>REGISTRO DE CONVOCATORIA</h3>
+                        </div>
+                        <form [formGroup]="form" (ngSubmit)="onSubmit()" action="#" class="row" style="margin:0 auto">
+
+
+                            <div class="form-group col-md-4">
+                                <label for="grado"></label>
+                                <input formControlName="grado" placeholder="Grados a Ofertar" type="text" class="form-control" size="30px">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="cupos"></label>
+                                <input formControlName="cupos" placeholder="Cupos Disponibles" type="text" class="form-control" size="30px">
+                            </div>
+
+                            <div class="form-group col-md-4">
+                                <label for="codigo identificador de la institucion"></label>
+                                <input formControlName="codigoInstitucion" placeholder="Código Institucional" type="text" class="form-control" size="30px">
+                            </div>
+
+
+                            <div class="form-group col-md-4">
+                                <label for="fechaInicio">Inicio de Inscripciones</label>
+                                <label for="fechaInicio"></label>
+                                <input formControlName="fechaInicio" id="date" type="date" size="30px " class="form-control">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="fechaCierre">Cierre de Inscripcion</label>
+                                <input formControlName="fechaCierre" id="date" type="date" size="30px " class="form-control">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="respuestaUsuario">Respuesta Usuario</label>
+                                <input formControlName="respuestaUsuario" id="date" type="date" size="30px " class="form-control">
+                            </div>
+                            <div *ngIf="load">
+                                <button type="submit" class="btn btn-primary active boton1">Registrar Convocatoria</button>
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <div *ngIf="!load" class="spinner-border text-warning" role="status">
+                                    <span class="visually-hidden"></span>
+                                </div>
+                            </div>
+                        </form>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<app-footer></app-footer>

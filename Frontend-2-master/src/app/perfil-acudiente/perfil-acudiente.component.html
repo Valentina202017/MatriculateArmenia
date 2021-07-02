@@ -1,0 +1,42 @@
+<app-nav></app-nav>
+<main class="fondo">
+    <div class="container" id="advanced-search-form">
+        <div class="container-xl">
+            <div class="table-responsive">
+                <section class="seccion-perfil-usuario">
+                    <div class="perfil-usuario-header">
+                        <div class="perfil-usuario-portada">
+                            <div class="perfil-usuario-avatar">
+                                <img src="../../assets/avatar.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="perfil-usuario-body">
+                        <div class="perfil-usuario-bio">
+                            <div class="datos2">
+                                <tr *ngFor="let persona of personas">
+                                    <p>REGISTRO DEL ACUDIENTE</p><br>
+
+                                    <p>
+                                        <span>Apellidos:</span> {{persona.apellidos}}</p>
+                                    <p> <span>Tipo de identificación:</span> {{persona.documento}}</p>
+                                    <p><span>Número de identificación:</span> {{persona.id}}</p>
+                                    <p><span>Dirección:</span> {{persona.direccion}}</p>
+                                    <p><span>Número 1:</span> {{persona.num1}}</p>
+                                    <p><span>Ocupación:</span> {{persona.ocupacion}}</p>
+                                    <p><span>Parentesco: </span>{{persona.parentesco}}</p>
+
+                                </tr>
+                                <div class="opcciones-perfil1">
+                                    <button type="button" class="btn btn-success" [routerLink]="['/RegistroEstudiante']"> Registrar Estudiante</button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</main>
+<app-footer></app-footer>

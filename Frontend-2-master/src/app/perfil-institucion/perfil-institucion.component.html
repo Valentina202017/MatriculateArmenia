@@ -1,0 +1,40 @@
+<app-nav></app-nav>
+<main class="fondo">
+    <div class="container" id="advanced-search-form">
+        <div class="container-xl">
+            <div class="table-responsive">
+
+                <section class="seccion-perfil-usuario">
+                    <div class="perfil-usuario-header">
+                        <div class="perfil-usuario-portada">
+                            <div class="perfil-usuario-avatar">
+                                <img src="../../assets/perfilintstitcuion.PNG">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="perfil-usuario-body">
+                        <div class="perfil-usuario-bio">
+                            <div class="datos">
+                                <tr *ngFor="let institucion of instituciones">
+
+                                    <p><span>Nombre de la Institución Educativa:</span> {{institucion.nombreInstitucion}}</p>
+                                    <p><span></span>Código Institucion Educativa: {{institucion.idinstitucion}}</p>
+                                    <p><span>Dirección:</span> {{institucion.direccion}}</p>
+                                    <p><span>Comuna:</span> {{institucion.comuna}}</p>
+                                    <p><span>Modalidad:</span> {{institucion.modalidad}}</p>
+                                    <p><span>Email:</span> {{institucion.email}}</p>
+
+                                </tr><br>
+                                <button class="boton1" type="button" class="btn btn-warning btn-lg" [routerLink]="['/AgregarCupos']">Registrar Convocatoria</button>
+                                <!--button class="boton2" type="button" class="btn btn-success btn-lg">Actualizar los Datos</button-->
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</main>
+<app-footer></app-footer>

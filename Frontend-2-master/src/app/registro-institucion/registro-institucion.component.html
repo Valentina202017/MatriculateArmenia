@@ -1,0 +1,82 @@
+<app-nav></app-nav>
+<main class="fondo">
+    <div class="container" id="advanced-search-form">
+        <div class="titulo">
+            <h2>REGISTRO INSTITUCIÓN</h2>
+        </div>
+
+        <form [formGroup]="form" (ngSubmit)="onSubmit()" action="#" class="row" style="margin:0 auto">
+            <div class="form-group col-md-4">
+                <label for="idinstitucion"></label>
+                <input formControlName="idinstitucion" placeholder="Código Único institucional" type="text" class="form-control" size="30px" [ngClass]="{ 'is-invalid': submitted && f.idinstitucion.errors }">
+                <div *ngIf="submitted && f.idinstitucion.errors" class="invalid-feedback">
+                    <div *ngIf="f.idinstitucion.errors.required">Por favor,ingresar el codigo institucional</div>
+                </div>
+            </div>
+
+            <div class="form-group col-md-4">
+                <label for="nombreInstitucion"></label>
+                <input formControlName="nombreInstitucion" placeholder="Nombre Institución Educativa" type="text" size="30px" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.nombreInstitucion.errors }">
+                <div *ngIf="submitted && f.nombreInstitucion.errors" class="invalid-feedback">
+                    <div *ngIf="f.nombreInstitucion.errors.required">Por favor, ingresa el nombre de la institución</div>
+                </div>
+            </div>
+
+            <div class="form-group col-md-4">
+                <label for="direccion"></label>
+                <input formControlName="direccion" placeholder="Dirección" type="text" size="30px" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.direccion.errors }">
+                <div *ngIf="submitted && f.direccion.errors" class="invalid-feedback">
+                    <div *ngIf="f.direccion.errors.required">Por favor, ingresa la dirección de la institución</div>
+                </div>
+            </div>
+
+            <div class="form-group col-md-4">
+                <label for="comuna"></label>
+                <input formControlName="comuna" placeholder="Comuna donde se ubica" type="text" class="form-control" size="30px" [ngClass]="{ 'is-invalid': submitted && f.comuna.errors }">
+                <div *ngIf="submitted && f.comuna.errors" class="invalid-feedback">
+                    <div *ngIf="f.comuna.errors.required">Por favor, ingresa la comuna</div>
+                </div>
+            </div>
+
+            <div class="form-group col-md-4">
+                <label for="modalidad"></label>
+                <input formControlName="modalidad" placeholder="Modalidad que Presenta" type="text" size="30px" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.modalidad.errors }">
+                <div *ngIf="submitted && f.modalidad.errors" class="invalid-feedback">
+                    <div *ngIf="f.modalidad.errors.required">Por favor, ingresa la modalidad que dan</div>
+                </div>
+            </div>
+
+            <div class="form-group col-md-4">
+                <label for="telefono"></label>
+                <input formControlName="telefono" placeholder="Contacto" type="text" size="30px" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.telefono.errors }">
+                <div *ngIf="submitted && f.telefono.errors" class="invalid-feedback">
+                    <div *ngIf="f.telefono.errors.required">Por favor, ingresa el numero de contacto de la institucion </div>
+                </div>
+            </div>
+            <div class="form-group col-md-4">
+                <label for="email"></label>
+                <input formControlName="email" placeholder="Correo Electrónico" type="email" class="form-control" size="30px" [ngClass]="{ 'is-invalid': submitted && f.email.errors }">
+                <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                    <div *ngIf="f.email.errors.required">Por favor, ingresa el correo institucional</div>
+                </div>
+            </div>
+
+            <div class="form-group col-md-4">
+                <label for="password"></label>
+                <input formControlName="password" placeholder="Contraseña" type="password" size="30px" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }">
+                <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                    <div *ngIf="f.password.errors.required">Por favor, ingrese la contraseña </div>
+                </div>
+            </div>
+            <div *ngIf="load" class="boton">
+                <button type="submit" class="btn btn-primary btn-lg active ">Registrar institución</button>
+            </div>
+            <div class="d-flex justify-content-center">
+                <div *ngIf="!load" class="spinner-border text-warning" role="status">
+                    <span class="visually-hidden"></span>
+                </div>
+            </div>
+        </form>
+    </div>
+</main>
+<app-footer></app-footer>

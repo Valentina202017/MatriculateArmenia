@@ -1,0 +1,193 @@
+    /* .navcol {
+    background-color: #ffffffd2;
+    background-size: cover;
+    border-style: groove;
+}
+
+.navg a {
+    color: #000000a9;
+    font-family: "Arial";
+    font-size: 20px;
+    padding: 9px 9px;
+    text-align: center; */
+    /* text-transform: uppercase; */
+    /* font-weight: bold;
+}
+
+.navg a:hover {
+    background-color: rgb(218, 218, 218);
+}
+
+.text-header {
+    min-height: 100vh;
+    color: #fafafa;
+    font-family: "Arial";
+}
+
+.text-header h2 {
+    font-family: 'Arial';
+    color: #fafafa;
+} */
+    /* .text-header span {
+    letter-spacing: 5px;
+    font-size: 1.3em;
+    font-family: "Arial";
+    margin: 0 0 0 5px;
+} */
+    /* .text-header p {
+    font-size: 2em;
+} */
+    /* .MatriculateEnArmenia {
+
+    background-image: url(../../assets/MatriculateEnArmenia.png);
+    background-size: cover;
+    padding: 3em;
+} */
+    
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    header {
+        margin-top: 9px;
+        width: 100%;
+        overflow: hidden;
+        height: 60px;
+        /* position: relative; */
+        overflow: visible;
+    }
+    
+    nav {
+        top: -18px;
+        position: relative;
+        left: 0;
+        right: 0;
+        margin: 7px auto;
+        max-width: 1000px;
+        width: 90%;
+        font-family: Arial;
+        font-size: 16px;
+        font-weight: bold;
+    }
+    
+    nav ul {
+        list-style: none;
+    }
+    
+    nav>ul {
+        display: table;
+        /*Quitamos el overflow hidden que estaba aqui*/
+        width: 100%;
+        background: #000;
+        position: relative;
+    }
+    
+    nav>ul li {
+        display: table-cell;
+    }
+    /*Sub-menu*/
+    
+    nav>ul>li:hover>ul {
+        display: block;
+        height: 100%;
+    }
+    
+    nav>ul>li>ul {
+        display: block;
+        position: absolute;
+        background: #000;
+        left: 0;
+        right: 0;
+        overflow: hidden;
+        height: 0%;
+        -webkit-transition: all .3s ease;
+        -moz-transition: all .3s ease;
+        -ms-transition: all .3s ease;
+        -o-transition: all .3s ease;
+        transition: all .3s ease;
+    }
+    
+    nav>ul li a {
+        color: #fff;
+        display: block;
+        line-height: 20px;
+        padding: 20px;
+        position: relative;
+        text-align: center;
+        text-decoration: none;
+        -webkit-transition: all .3s ease;
+        -moz-transition: all .3s ease;
+        -ms-transition: all .3s ease;
+        -o-transition: all .3s ease;
+        transition: all .3s ease;
+    }
+    
+    nav>ul>li>ul>li a:hover {
+        background: #60f15b;
+    }
+    /*
+nav>ul>li>a span {
+background: #174459;
+display: block;
+height: 100%;
+width: 100%;
+left: 0;
+position: absolute;
+top: -55px;
+-webkit-transition: all .3s ease;
+-moz-transition: all .3s ease;
+-ms-transition: all .3s ease;
+-o-transition: all .3s ease;
+transition: all .3s ease;
+} */
+    
+    nav>ul>li>a span .icon {
+        display: block;
+        line-height: 60px;
+    }
+    
+    nav>ul>li>a:hover>span {
+        top: 0;
+    }
+    /*Colores*/
+    /* nav ul li a .primero {
+background: #217002;
+}
+
+nav ul li a .segundo {
+background: #217002;
+}
+
+nav ul li a .tercero {
+background: #217002;
+}
+
+nav ul li a .cuarto {
+background: #ece805;
+}
+
+nav ul li a .quinto {
+background: #fbfbfb;
+}
+*/
+    
+    .MatriculateEnArmenia {
+        background-image: url(../../assets/MatriculateEnArmenia.png);
+        background-size: cover;
+        /* position: static; */
+        right: -700px;
+        width: 240px;
+        height: 240px;
+        float: none;
+        display: inline-block;
+        padding-right: 180px;
+        top: -10px;
+        margin: 0px auto 0;
+        position: relative;
+        font-size: 0;
+    }
+    
+    .boton {
+        color: #fff;
+    }

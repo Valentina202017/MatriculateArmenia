@@ -1,0 +1,47 @@
+<app-nav></app-nav>
+<main class="fondo">
+    <div class="container" id="advanced-search-form">
+        <div class="container-xl">
+            <div class="table-responsive">
+                <div class="table-wrapper">
+                    <section class="form-formu">
+                        <h3>REGISTRO DE MATRÍCULA </h3>
+
+                        <tr *ngFor="let estudiante of estudiantes">
+                              <p>Nombre Acudiente: {{estudiante.nombres}}  {{estudiante.apellidos}}</p>
+                              <p>Número de Documento: {{estudiante.id}}</p>
+                              <p>Correo Electrónico: {{estudiante.email}}</p>
+                              <p>---</p>
+                        </tr>
+
+                        <tr *ngFor="let estudiante2 of estudiantes2">
+                              <p>identificacion Estudiante: {{estudiante2.idEstudiante}}</p>
+                              <p>estudiante: {{estudiante2.primerNombre}} {{estudiante2.primerApellido}}</p>
+                              <p>fecha de nacimiento: {{estudiante2.fechaNacimiento}}</p>
+
+                              <p>---</p>
+                        </tr>
+                        <br>
+                        <h2>Datos institucion y cupo</h2>
+                        <p>codigo Institucion: {{idcolegio}}</p>
+                        <p>codigo cupo: {{idcupo}}</p>
+                        <p>grado escolar: {{gradoe}}</p>
+                        <p>cupos totales: {{cupost}}</p>
+                        <p>Fecha inicio Convocatoria: {{fechai}}</p>
+                        <p>fecha Terminacion Convocatoria: {{fechaci}}</p>
+                        <button type="submit" class="btn btn-primary btn-lg active boton1"(click)="mandar()" >Matricular</button>
+
+
+
+
+
+
+
+                        <!-- </div> -->
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<app-footer></app-footer>

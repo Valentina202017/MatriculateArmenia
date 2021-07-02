@@ -1,0 +1,152 @@
+<app-nav></app-nav>
+<main class="fondo">
+    <div class="container" id="advanced-search-form">
+        <div class="container-xl">
+            <div class="table-responsive">
+                <div class="table-wrapper">
+                    <section class="form-formu">
+                        <div class="titulo">
+                            <h3>REGISTRO DE ESTUDIANTE </h3>
+                        </div>
+                        <form [formGroup]="form" (ngSubmit)="onSubmit()" action="#" class="row" style="margin:0 auto">
+
+                            <div class="form-group col-md-4">
+                                <label for="nombres"> primer nombre</label>
+                                <input formControlName="primerNombre" placeholder="Primer nombre" type="text" class="form-control" size="30px">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="nombres">segundo nombre</label>
+                                <input formControlName="segundoNombre" placeholder="Segundo nombre" type="text" class="form-control" size="30px">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="nombres">primer apellido</label>
+                                <input formControlName="primerApellido" placeholder="Primer apellido" type="text" class="form-control" size="30px">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="nombres">segundo apellido</label>
+                                <input formControlName="segundoApellido" placeholder="Segundo apellido" type="text" class="form-control" size="30px">
+                            </div>​
+                            <div class="form-group col-md-4">
+                                <label for="tipoIdentificacion">tipo de identificacion</label>
+                                <select id="tipoIdentificacion" formControlName="tipoIdentificacion" placeholder="Tipo de documento" class="form-control" required>
+                                <option disabled  selected>Tipo de identificación</option>
+                                 <option option value="RC">Registro Civil</option>
+                                <option value="TI">Tarjeta de Identidad</option>
+                                <option value="PA">Pasaporte</option>
+                            </select>
+                            </div>
+
+                            <div class="form-group col-md-4">
+                                <label for="idEstudiante">identificacion Estudiante</label>
+                                <input formControlName="idEstudiante" placeholder="Número del documento" type="text" class="form-control" size="30px">
+                            </div>
+
+                            <div class="form-group col-md-4">
+                                <label for="genero">genero </label>
+                                <select id="genero" formControlName="genero" placeholder="Genero" class="form-control">
+                                <option disabled selected>Genero</option>
+                                 <option option value="F">Femenino</option>
+                                <option value="M">Masculino</option>
+                              </select>
+                            </div>
+                            ​
+                            <div class="form-group col-md-4 ">
+                                <label for="fechaNacimiento">fecha fechaNacimiento</label>
+                                <input formControlName="fechaNacimiento" id="date" type="date" size="30px " class="form-control">
+                            </div>
+                            ​
+                            <div class="form-group col-md-4">
+                                <label for="municipioResidencia">municipio de residencia</label>
+                                <select id="municipioResidencia" formControlName="municipioResidencia" placeholder="Municipio de residencia" type="text" class="form-control">
+                                    <option disabled  selected>Municipio de residencia</option>
+                                    <option option value="Armenia">Armenia</option>
+                                    <option option value="Circacia">Circacia</option>
+                                    <option option value="Salento">Salento</option>
+                                    <option option value="Filandia">Filandia</option>
+                                    <option option value="Montenegro">Montenegro</option>
+                                    <option option value="Pijao">Pijao</option>
+                                    <option option value="Génova">Génova</option>
+                                    <option option value="Sevilla">Sevilla</option>
+                                    <option option value="La Tebaida">La Tebaida</option>
+                                    <option option value="Buenavista">Buenavista</option>
+                                    <option option value="Córdoba">Córdoba</option>
+                                    <option option value="Calarcá">Calarcá</option>
+                                </select>
+                            </div>
+                            ​
+                            <div class="form-group col-md-4">
+                                <label for="direccion">direccion</label>
+                                <input formControlName="direccion" placeholder="Dirección" type="text" class="form-control" size="30px">
+                            </div>
+
+                            <div class="form-group col-md-4">
+                                <label for="razaEtnia">razaEtnia</label>
+                                <select id="razaEtnia" formControlName="razaEtnia" placeholder="razaEtnia" class="form-control">
+                                <option disabled  selected>Raza Étnia</option>
+                                 <option option value="A">Naza/Páez</option>
+                                    <option option value="W">Wayuu</option>
+                                    <option option value="E">Embera</option>
+                                    <option option value="Q">Quillacinga</option>
+                                    <option option value="L">Los Zenú</option>
+                                    <option option value="L">Los Sikuani</option>
+                                    <option option value="Y">Yanacona</option>
+                                    <option option value="no">no pertenece</option>
+                              </select>
+                            </div>
+                            ​
+                            <div class="form-group col-md-4">
+                                <label for="estrato">Estrato</label>
+                                <select id="estrato" formControlName="estrato" placeholder="poblacionVulnerable" class="form-control">
+                                <option disabled  selected>estrato socioeconómico</option>
+                                <option option value=1>1</option>
+                                <option value=2>2</option>
+                                <option value=3>3</option>
+                                <option value=4>4</option>
+                                <option value=5>5</option>
+                                <option value=6>6</option>
+                              </select>
+                            </div>
+
+                            <div class="form-group col-md-4">
+                                <label for="poblacionVulnerable">poblacion Vulnerable</label>
+                                <select id="poblacionVulnerable" formControlName="poblacionVulnerable" placeholder="poblacionVulnerable" class="form-control">
+                                <option disabled  selected>Población Vulnerable</option>
+                                 <option option value="si">Si</option>
+                                <option value="no">No</option>
+                              </select>
+                            </div>​
+                            <div class="form-group col-md-4 ">
+                                <label for="telefono">Telefono</label>
+                                <input formControlName="telefono" placeholder="Teléfono" type="text " size="30px " class="form-control ">
+                            </div>
+                            <div class="form-group col-md-4 ">
+                                <label for="idAcudiente">identificacion Acudiente</label>
+                                <input formControlName="idAcudiente" placeholder="Identificacion Acudiente" type="text " size="30px " class="form-control ">
+                            </div>
+                            <div class="form-group ">
+                                <label for="pdf">Adjuntar los siguientes documentos en un archivo ÚNICO en formato PDF:<br> 1. Documento de identidad del acudiente y estudiante.<br> 2. Recibo de servicio público.<br>3. Notas del último periódo cursado.<br>Tamaño del archivo permitido 5 megas.<br> NOTA: En el siguiente Link están las indicaciones para convertir el documento en PDF</label>
+                                <a href="https://www.ilovepdf.com/es/jpg_a_pdf" target="_blank"> Link de página para convertir a PDF</a>
+                                <input type="file" (change)="upload($event)" size="30px " class="form-control ">
+                            </div>
+
+                            <div class="boton1" *ngIf="load">
+                                <button type="submit" class="btn btn-primary">Registrar estudiante</button>
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <div *ngIf="!load" class="spinner-border text-warning" role="status">
+                                </div>
+                            </div>
+                            <div *ngIf="load">
+                                <button type="submit" class="btn btn-success boton2" [routerLink]="['/CuposOfertados']">Cupos ofertados</button>
+                            </div>
+                            <div *ngIf="load">
+                                <button type="submit" class="btn btn-warning boton3" [routerLink]="['/RegistroAcudiente']">Regresar</button>
+                            </div>
+                        </form>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<app-footer></app-footer>
